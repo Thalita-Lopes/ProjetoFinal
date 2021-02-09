@@ -12,7 +12,7 @@ def index(request):
     form = Form_Motorista()
     return render(request, 'index.html',{'form':form})
 
-def salvar_form(request):
+def salvar_form(request): 
     if request.method == 'POST':
         form = Form_Motorista(request.POST)
         if form.is_valid():
