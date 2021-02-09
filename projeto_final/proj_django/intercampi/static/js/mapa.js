@@ -63,6 +63,5 @@ mapa.on('click', setInterval(function(){
 
       console.log(position);
       /*var coordenadasSirgas = ol.proj.transform(coordenadas, 'ESPG:3857','ESPG:4326')*/
-      ponto = [-49.26188,-25.42601]
       inserePonto(position)
 },5000));
