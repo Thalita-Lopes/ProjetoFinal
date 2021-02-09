@@ -1,0 +1,19 @@
+<!DOCTYPE html> {% load static %}
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>INTERCAMPI</title>
+    <link rel="stylesheet" href={% static "css/index.css" %}>
+  </head>
+  <body>
+    TESTE
+    <form action ="salvar_form" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <button type="submit" name="button">Entrar</button>
+    </form>
+    <script type="text/javascript" src={% static "js/index.js" %}>
+
+    </script>
+  </body>
+</html>
