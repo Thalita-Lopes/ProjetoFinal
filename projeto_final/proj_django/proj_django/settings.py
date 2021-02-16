@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'proj_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'banco_intercampi4',
+        'NAME': 'banco_intercampi7',
         'USER': 'user',
         'PASSWORD': 'user',
         'HOST': 'localhost',

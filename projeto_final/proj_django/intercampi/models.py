@@ -3,7 +3,22 @@ from __future__ import unicode_literals
 
 from django.contrib.gis.db import models
 
+
 # Create your models here.
+
+class Motoristas_cadastrados(models.Model):
+    nome = models.CharField(primary_key=True, max_length = 40)
+    cpf = models.IntegerField('Informe seu CPF:')
+
+    class Meta:
+        db_table = 'motoristas_cadastrados'
+        managed = True
+
+    def __unicode__(self):
+        return '%s' %self.nome
+
+
+
 class Linhas(models.Model):
     nome_linha=models.CharField(primary_key=True, max_length = 40)
     rota_padrao = models.LineStringField()
@@ -15,30 +30,44 @@ class Linhas(models.Model):
     def __unicode__(self):
         return '%s' %self.nome_linha
 
-class Motoristas(models.Model):
-    id_motorista= models.AutoField(primary_key= True)
+class Viagens(models.Model):
+    id_viagem= models.AutoField(primary_key= True)
     nome_linha = models.ForeignKey(Linhas, on_delete = models.CASCADE)
-    nome = models.CharField('Informe seu nome:', max_length=30)
+    nome = models.ForeignKey(Motoristas_cadastrados, on_delete = models.CASCADE)
     cpf = models.IntegerField('Informe seu CPF:')
-    data = models.DateField(auto_now_add = True)
+    data = models.DateField(auto_now_add= True)
 
     class Meta:
-        db_table = 'motoristas'
+        db_table = 'viagens'
         managed = True
 
 
 class Posicao(models.Model):
     id_posicao = models.AutoField(primary_key = True)
-    id_motorista = models.ForeignKey(Motoristas, on_delete = models.CASCADE)
+    id_viagem = models.ForeignKey(Viagens, on_delete = models.CASCADE)
     nome_linha = models.ForeignKey(Linhas, on_delete = models.CASCADE)
     geom = models.PointField()
-    data = models.DateField(auto_now_add = True)
+    data = models.DateField(auto_now_add= True)
 
     class Meta:
         db_table = 'posicao'
         managed = True
 
+class Rota_atual(models.Model):
+    id_rota_atual = models.AutoField(primary_key = True)
+    id_posicao = models.ForeignKey(Posicao, on_delete = models.CASCADE)
+    id_viagem = models.ForeignKey(Viagens, on_delete = models.CASCADE)
+    nome_linha = models.ForeignKey(Linhas, on_delete = models.CASCADE)
+    geom = models.LineStringField()
 
+
+    class Meta:
+        db_table = 'rota_atual'
+        managed = True
+
+
+
+"""_________________________________________________________________________"""
 """class Rota_padrao(models.Model):
     id_rota_padrao = models.AutoField(primary_key = True)
     cpf_motoristas = models.ForeignKey(Motoristas, on_delete = models.CASCADE)

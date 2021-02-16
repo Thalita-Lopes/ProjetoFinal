@@ -7,5 +7,3 @@ urlpatterns = [
     url(r'salvar_form$', views.salvar_form, name = 'salvar_form'),
     url(r'insereposicao$', views.insereposicao, name = 'insereposicao'),
 ]
-
-"""url(r'geolocation$', views.geolocation, name = 'geolocation'),"""

@@ -15,9 +15,20 @@ var layerOsm = new ol.layer.Tile({
 
 var layerPosicao = new ol.layer.Image({
   source: new ol.source.ImageWMS({
-    url: 'http://localhost:8082/geoserver/projeto_django/wms',
+    url: 'http://localhost:8082/geoserver/intercampi/wms',
     params: {
-      'LAYERS':'projeto_django:posicao',
+      'LAYERS':'intercampi:posicao',
+    },
+    ratio:1,
+    serverType: 'geoserver'
+  })
+
+})
+var layerLinhas = new ol.layer.Image({
+  source: new ol.source.ImageWMS({
+    url: 'http://localhost:8082/geoserver/intercampi/wms',
+    params: {
+      'LAYERS':'intercampi:linhas',
     },
     ratio:1,
     serverType: 'geoserver'
@@ -26,9 +37,11 @@ var layerPosicao = new ol.layer.Image({
 })
 
 mapa.addLayer(layerOsm);
+mapa.addLayer(layerPosicao);
+mapa.addLayer(layerLinhas);
 
 function inserePonto(posicao){
-  var json = {"id_moto":id_motorista, "ponto":[posicao[0],posicao[1]], "nome_linha":nome_linha}
+  var json = {"id_vg":id_viagem, "ponto":[posicao[0],posicao[1]], "nome_linha":nome_linha}
   $.ajax(
     {
       url:"insereposicao",
@@ -40,6 +53,7 @@ function inserePonto(posicao){
       dataType:'json',
       sucess: function(result){
         layerPosicao.getSource(),updateParams({"time": Date.now()})
+        layerLinhas.getSource(),updateParams({"time": Date.now()})
       },
       error: function(error){
         alert(error)
