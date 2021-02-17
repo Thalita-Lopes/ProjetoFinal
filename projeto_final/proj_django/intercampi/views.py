@@ -43,19 +43,13 @@ def insereposicao(request):
             obj = Posicao(id_viagem = obj_viagem, geom = ponto, nome_linha = obj_linha)
             obj.save()
 
-            """todosospontos = []
-            todosospontos = Posicao.objects.filter(nome_linha = obj_linha).get(geom = ponto)
-            print todosospontos
+            """todosospontos = []"""
+            todosospontos = Posicao.objects.filter(nome_linha = obj_linha).order_by('id_posicao')
+            """print todosospontos"""
             pontos = []
             for p in todosospontos:
-                pontos.append(p)
-                print pontos"""
-            todosospontos = (float(dicionario['ponto[]'][0]), float(dicionario['ponto[]'][1]))
-            print todosospontos
-
-            if 1 == 1:
-                pontos.append(todosospontos)
-                print pontos
+                pontos.append(p.geom)
+        
 
             if len(pontos) >= 2:
                 linestring = LineString(pontos)
@@ -64,6 +58,7 @@ def insereposicao(request):
 
                 objRA = Rota_atual(id_viagem = obj_viagem, nome_linha = obj_linha, geom = linestring)
                 objRA.save()
+                print len(pontos)
 
 
             resposta = '{result:ok}'
