@@ -25,7 +25,7 @@ def salvar_form(request):
         else:
             print 'Não válido'
             return render(request, 'mapa.html')
-
+pontos = []
 def insereposicao(request):
     if request.is_ajax():
         if request.method == 'POST':
@@ -38,12 +38,32 @@ def insereposicao(request):
             obj_viagem = Viagens.objects.get(id_viagem = id_viagem)
             print ponto
             obj_linha = Linhas.objects.get(nome_linha = nome_linha)
-            print obj_linha
+
 
             obj = Posicao(id_viagem = obj_viagem, geom = ponto, nome_linha = obj_linha)
             obj.save()
 
-            
+            """todosospontos = []
+            todosospontos = Posicao.objects.filter(nome_linha = obj_linha).get(geom = ponto)
+            print todosospontos
+            pontos = []
+            for p in todosospontos:
+                pontos.append(p)
+                print pontos"""
+            todosospontos = (float(dicionario['ponto[]'][0]), float(dicionario['ponto[]'][1]))
+            print todosospontos
+
+            if 1 == 1:
+                pontos.append(todosospontos)
+                print pontos
+
+            if len(pontos) >= 2:
+                linestring = LineString(pontos)
+                print linestring
+
+
+                objRA = Rota_atual(id_viagem = obj_viagem, nome_linha = obj_linha, geom = linestring)
+                objRA.save()
 
 
             resposta = '{result:ok}'

@@ -55,7 +55,6 @@ class Posicao(models.Model):
 
 class Rota_atual(models.Model):
     id_rota_atual = models.AutoField(primary_key = True)
-    id_posicao = models.ForeignKey(Posicao, on_delete = models.CASCADE)
     id_viagem = models.ForeignKey(Viagens, on_delete = models.CASCADE)
     nome_linha = models.ForeignKey(Linhas, on_delete = models.CASCADE)
     geom = models.LineStringField()
