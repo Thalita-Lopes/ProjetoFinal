@@ -6,6 +6,7 @@ from django.http import JsonResponse
 import json
 from . models import Posicao, Viagens, Linhas, Motoristas_cadastrados, Rota_atual #Rota_atual, Rota_padrao, Onibus, Paradas, Campi
 from django.contrib.gis.geos import Point, LineString, Polygon
+from django.contrib.gis.geos import GEOSGeometry
 
 # Create your views here.
 def index(request):
@@ -25,7 +26,7 @@ def salvar_form(request):
         else:
             print 'Não válido'
             return render(request, 'mapa.html')
-pontos = []
+
 def insereposicao(request):
     if request.is_ajax():
         if request.method == 'POST':
@@ -43,27 +44,20 @@ def insereposicao(request):
             obj = Posicao(id_viagem = obj_viagem, geom = ponto, nome_linha = obj_linha)
             obj.save()
 
-            """todosospontos = []
-            todosospontos = Posicao.objects.filter(nome_linha = obj_linha).get(geom = ponto)
-            print todosospontos
+            todosospontos = Posicao.objects.filter(nome_linha = obj_linha).order_by('id_posicao')
             pontos = []
             for p in todosospontos:
-                pontos.append(p)
-                print pontos"""
-            todosospontos = (float(dicionario['ponto[]'][0]), float(dicionario['ponto[]'][1]))
-            print todosospontos
+                pontos.append(p.geom)
 
-            if 1 == 1:
-                pontos.append(todosospontos)
-                print pontos
 
             if len(pontos) >= 2:
                 linestring = LineString(pontos)
                 print linestring
 
-
+                GEOSGeometry.simplify(linestring,tolerance = 0.0)
                 objRA = Rota_atual(id_viagem = obj_viagem, nome_linha = obj_linha, geom = linestring)
                 objRA.save()
+                print len(pontos)
 
 
             resposta = '{result:ok}'
