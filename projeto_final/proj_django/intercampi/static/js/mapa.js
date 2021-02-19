@@ -24,20 +24,11 @@ var layerPosicao = new ol.layer.Image({
   })
 })
 
-/*var layerLinhas = new ol.layer.Image({
-  source: new ol.source.ImageWMS({
-    url: 'http://localhost:8082/geoserver/intercampi/wms',
-    params: {
-      'LAYERS':'intercampi:linhas',
-    },
-    ratio:1,
-    serverType: 'geoserver'
-  })
-})*/
+
 
 mapa.addLayer(layerOsm);
 mapa.addLayer(layerPosicao);
-//mapa.addLayer(layerLinhas);
+
 
 function inserePonto(posicao){
   var json = {"id_vg":id_viagem, "ponto":[posicao[0],posicao[1]], "nome_linha":nome_linha}
@@ -80,4 +71,24 @@ mapa.on('click', intervalo);
 function Pararfuncao(){
   clearInterval(intervalo);
   alert('Compartilhamento encerrado!')
+  location.href = 'http://localhost:8000/index'
+  var json = {"id_vg":id_viagem, "nome_linha":nome_linha}
+  $.ajax(
+    {
+      url:"pararinsercao",
+      type:"POST",
+      headers:{
+        "X-CSRFToken":token
+      },
+      data:json,
+      dataType:'json',
+      sucess: function(result){
+
+      },
+      error: function(error){
+        alert(error)
+      }
+    }
+  )
+
 }

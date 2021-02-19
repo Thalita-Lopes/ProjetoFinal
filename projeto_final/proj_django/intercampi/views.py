@@ -62,3 +62,18 @@ def insereposicao(request):
 
             resposta = '{result:ok}'
             return JsonResponse(json.dumps(resposta), safe=False)
+
+def pararinsercao(request):
+    if request.is_ajax():
+        if request.method == 'POST':
+            dicionario = dict(request.POST)
+            id_viagem = dicionario['id_vg'][0]
+            nome_linha = dicionario['nome_linha'][0]
+            print "Dados da Tabela Posicao apagados"
+
+            excluidos = Posicao.objects.filter(nome_linha = nome_linha).delete()
+            print excluidos
+
+
+            resposta = '{result:ok}'
+            return JsonResponse(json.dumps(resposta), safe=False)
