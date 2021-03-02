@@ -4,9 +4,26 @@ body {
   margin:0;
   padding:0;
 }
+header{
+  background-color: #b3cce6;
+  height: 20px;
+  font-size: 18px;
+  text-align: center;
+  font-variant: Arial, Helvetica;
+  padding: 15px;
+}
+footer{
+  clear:both;
+  background-color: #b3cce6;
+  height: 22px;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+  text-shadow: 1px 1px 1px #F5FFFA;
+}
 #mapa{
   position: relative;
-  height: 400px;
+  height: 700px;
   width: 100%;
   background-color: white;
 }

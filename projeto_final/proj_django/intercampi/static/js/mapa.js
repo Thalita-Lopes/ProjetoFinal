@@ -15,9 +15,10 @@ var layerOsm = new ol.layer.Tile({
 
 var layerPosicao = new ol.layer.Image({
   source: new ol.source.ImageWMS({
-    url: 'http://localhost:8082/geoserver/intercampi/wms',
+    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi:posicao',
+      'SRS':'EPSG:900913',
     },
     ratio:1,
     serverType: 'geoserver'
@@ -26,9 +27,10 @@ var layerPosicao = new ol.layer.Image({
 
 var layerRotaAtual = new ol.layer.Image({
   source: new ol.source.ImageWMS({
-    url: 'http://localhost:8082/geoserver/Intercampi_app/wms',
+    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
-      'LAYERS':'Intercampi_app:rota_atual',
+      'LAYERS':'intercampi_app:rota_atual',
+      'SRS':'EPSG:900913',
     },
     ratio:1,
     serverType: 'geoserver'

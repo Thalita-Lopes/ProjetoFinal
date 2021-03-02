@@ -2,8 +2,8 @@
 var mapa = new ol.Map({
   target:'mapa',
   view: new ol.View({
-    center: ol.proj.fromLonLat([-49.26188,-25.42601]),
-    zoom: 16
+    center: ol.proj.fromLonLat([-49.25723,-25.43177]),
+    zoom: 15
   })
 })
 
@@ -17,9 +17,9 @@ var layerPosicao = new ol.layer.Image({
     title: "Posicao",
     displayInLayerSwitcher: true,
     source: new ol.source.ImageWMS({
-    url: 'http://localhost:8082/geoserver/Intercampi_app/wms',
+    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
-      'LAYERS':'Intercampi_app:posicao',
+      'LAYERS':'intercampi_app:posicao',
     },
     ratio:1,
     serverType: 'geoserver'
@@ -30,9 +30,9 @@ var layerPontosDeOnibus = new ol.layer.Image({
   title: "Ponto de onibus",
   displayInLayerSwitcher: true,
   source: new ol.source.ImageWMS({
-    url: 'http://localhost:8082/geoserver/Intercampi_app/wms',
+    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
-      'LAYERS':'Intercampi_app:pontosdeonibustcc',
+      'LAYERS':'intercampi_app:pontosdeonibustcc',
       'SRS':'EPSG:900913',
     },
     ratio:1,
@@ -44,9 +44,9 @@ var layerRotaAtual = new ol.layer.Image({
   title: "Rota Atual",
   displayInLayerSwitcher: true,
   source: new ol.source.ImageWMS({
-    url: 'http://localhost:8082/geoserver/Intercampi_app/wms',
+    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
-      'LAYERS':'Intercampi_app:rota_atual',
+      'LAYERS':'intercampi_app:rota_atual',
       'SRS':'EPSG:900913',
     },
     ratio:1,
@@ -57,9 +57,9 @@ var layerLinhas = new ol.layer.Image({
   title: "Linhas",
   displayInLayerSwitcher: true,
   source: new ol.source.ImageWMS({
-    url: 'http://localhost:8082/geoserver/Intercampi_app/wms',
+    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
-      'LAYERS':'Intercampi_app:linhas',
+      'LAYERS':'intercampi_app:linhas',
       'SRS':'EPSG:900913',
     },
     ratio:1,

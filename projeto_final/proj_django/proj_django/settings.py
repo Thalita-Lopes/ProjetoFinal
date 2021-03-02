@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'proj_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'banco_intercampi7',
-        'USER': 'user',
-        'PASSWORD': 'user',
-        'HOST': 'localhost',
+        'NAME': 'banco_intercampi',
+        'USER': 'usuarioexterno',
+        'PASSWORD': 'usuarioOGLusuarioexterno',
+        'HOST': '200.17.225.171',
         'PORT': '5432',
     }
 }
