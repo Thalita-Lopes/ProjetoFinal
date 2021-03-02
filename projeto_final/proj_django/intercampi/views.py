@@ -9,6 +9,12 @@ from django.contrib.gis.geos import Point, LineString, Polygon
 from django.contrib.gis.geos import GEOSGeometry
 
 # Create your views here.
+def home(request):
+    return render(request, 'home.html')
+
+def mapadousuario(request):
+    return render(request, 'mapadousuario.html')
+
 def index(request):
     form = Form_Viagens()
     return render(request, 'index.html',{'form':form})
@@ -72,7 +78,9 @@ def pararinsercao(request):
             print "Dados da Tabela Posicao apagados"
 
             excluidos = Posicao.objects.filter(nome_linha = nome_linha).delete()
+            excluida = Rota_atual.objects.filter(nome_linha = nome_linha).delete()
             print excluidos
+            print excluida
 
 
             resposta = '{result:ok}'

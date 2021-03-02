@@ -24,11 +24,20 @@ var layerPosicao = new ol.layer.Image({
   })
 })
 
-
+var layerRotaAtual = new ol.layer.Image({
+  source: new ol.source.ImageWMS({
+    url: 'http://localhost:8082/geoserver/Intercampi_app/wms',
+    params: {
+      'LAYERS':'Intercampi_app:rota_atual',
+    },
+    ratio:1,
+    serverType: 'geoserver'
+  })
+})
 
 mapa.addLayer(layerOsm);
 mapa.addLayer(layerPosicao);
-
+mapa.addLayer(layerRotaAtual);
 
 function inserePonto(posicao){
   var json = {"id_vg":id_viagem, "ponto":[posicao[0],posicao[1]], "nome_linha":nome_linha}
@@ -43,7 +52,7 @@ function inserePonto(posicao){
       dataType:'json',
       sucess: function(result){
         layerPosicao.getSource(),updateParams({"time": Date.now()})
-        layerLinhas.getSource(),updateParams({"time": Date.now()})
+        layerRotaAtual.getSource(),updateParams({"time": Date.now()})
       },
       error: function(error){
         alert(error)

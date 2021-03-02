@@ -6,12 +6,13 @@
     <link rel="stylesheet" href={% static "css/index.css" %}>
   </head>
   <body>
-    TESTE
+    <p>INICIE A VIAGEM</p>
     <form action ="salvar_form" method="post">
       {% csrf_token %}
       {{ form }}
-      <button type="submit" name="button">Entrar</button>
+      <button type="submit" name="button">Iniciar Viagem</button>
     </form>
+    <button onclick ="PaginaInicial();"> Sair </button>
     <script type="text/javascript" src={% static "js/index.js" %}>
 
     </script>
