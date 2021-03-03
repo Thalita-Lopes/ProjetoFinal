@@ -53,8 +53,8 @@ function inserePonto(posicao){
       data:json,
       dataType:'json',
       sucess: function(result){
-        layerPosicao.getSource(),updateParams({"time": Date.now()})
-        layerRotaAtual.getSource(),updateParams({"time": Date.now()})
+        layerPosicao.getSource().updateParams({"time": Date.now()})
+        layerRotaAtual.getSource().updateParams({"time": Date.now()})
       },
       error: function(error){
         alert(error)
