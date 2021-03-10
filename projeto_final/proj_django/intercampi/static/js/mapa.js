@@ -74,8 +74,8 @@ var intervalo = setInterval(function(){
 
       console.log(position);
 
-      inserePonto(position)
-},5000);
+      inserePonto(position);
+},4000);
 
 mapa.on('click', intervalo);
 

@@ -64,8 +64,75 @@ class Rota_atual(models.Model):
         db_table = 'rota_atual'
         managed = True
 
+class Posicao_atual(models.Model):
+    id_pa = models.CharField(primary_key=True, max_length = 40)
+    id_viagem = models.ForeignKey(Viagens, on_delete = models.CASCADE)
+    nome_linha = models.ForeignKey(Linhas, on_delete = models.CASCADE)
+    geom = models.PointField()
 
+    class Meta:
+        db_table = 'Posicao_atual'
+        managed = True
 
+class Posicao_atual_Linha(models.Model):
+    id_pa = models.CharField(primary_key=True, max_length = 40)
+    id_viagem = models.ForeignKey(Viagens, on_delete = models.CASCADE)
+    nome_linha = models.ForeignKey(Linhas, on_delete = models.CASCADE)
+    geom = models.LineStringField()
+
+    class Meta:
+        db_table = 'Posicao_atual_Linha'
+        managed = True
+
+class Posicao_atualII(models.Model):
+    id_pa = models.CharField(primary_key=True, max_length = 40)
+    id_viagem = models.ForeignKey(Viagens, on_delete = models.CASCADE)
+    nome_linha = models.ForeignKey(Linhas, on_delete = models.CASCADE)
+    geom = models.PointField()
+
+    class Meta:
+        db_table = 'Posicao_atualII'
+        managed = True
+
+class Posicao_atualIII(models.Model):
+    id_pa = models.CharField(primary_key=True, max_length = 40)
+    id_viagem = models.ForeignKey(Viagens, on_delete = models.CASCADE)
+    nome_linha = models.ForeignKey(Linhas, on_delete = models.CASCADE)
+    geom = models.PointField()
+
+    class Meta:
+        db_table = 'Posicao_atualIII'
+        managed = True
+
+class Posicao_atualIV(models.Model):
+    id_pa = models.CharField(primary_key=True, max_length = 40)
+    id_viagem = models.ForeignKey(Viagens, on_delete = models.CASCADE)
+    nome_linha = models.ForeignKey(Linhas, on_delete = models.CASCADE)
+    geom = models.PointField()
+
+    class Meta:
+        db_table = 'Posicao_atualIV'
+        managed = True
+
+class Posicao_atualExtra(models.Model):
+    id_pa = models.CharField(primary_key=True, max_length = 40)
+    id_viagem = models.ForeignKey(Viagens, on_delete = models.CASCADE)
+    nome_linha = models.ForeignKey(Linhas, on_delete = models.CASCADE)
+    geom = models.PointField()
+
+    class Meta:
+        db_table = 'Posicao_atualExtra'
+        managed = True
+
+class Posicao_atualFerias(models.Model):
+    id_pa = models.CharField(primary_key=True, max_length = 40)
+    id_viagem = models.ForeignKey(Viagens, on_delete = models.CASCADE)
+    nome_linha = models.ForeignKey(Linhas, on_delete = models.CASCADE)
+    geom = models.PointField()
+
+    class Meta:
+        db_table = 'Posicao_atualFerias'
+        managed = True
 """_________________________________________________________________________"""
 """class Rota_padrao(models.Model):
     id_rota_padrao = models.AutoField(primary_key = True)
