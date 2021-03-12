@@ -3,14 +3,82 @@ body {
   width: 100%;
   margin:0;
   padding:0;
-  background-color: blue;
+  background-color: #f2f2f2;
 }
 
 h1 {
-  color: white;
+  color: black;
   position: center;
 }
 
-a {
-  background-color: white;
+h3 {
+  color: black;
+  position: center;
+  margin-top: 35px;
+}
+
+header{
+  background-color: #b3cce6;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  font-variant: Arial, Helvetica;
+  padding: 15px;
+}
+footer{
+  clear:both;
+  background-color: #b3cce6;
+  height: 22px;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+  text-shadow: 1px 1px 1px #F5FFFA;
+}
+.container{
+  height: 540px;
+  width: 1050px;
+  margin: 0 auto;
+}
+#logo{
+  float:left;
+}
+
+
+#apresentacao{
+ text-align: center;
+}
+#AcessoMotorista{
+  float: left;
+  background-color: #b3cce6;
+  height: 400px;
+  width: 325px;
+  box-shadow: 2px 2px 2px #111111;
+}
+#irpara{
+    text-align: center;
+    padding: 20px;
+    height: 30px;
+    width: 140px;
+    margin-left: 75px;
+    background: #b3cce6;
+    box-shadow: 2px 2px 2px #111111;
+}
+
+
+#AcessoUsuario{
+  float: left;
+  margin-left: 35px;
+  background-color: #b3cce6;
+  height: 400px;
+  width: 325px;
+  box-shadow: 2px 2px 2px #111111;
+}
+
+#AcessoItinerário{
+  float:right;
+  margin-right: 10px;
+  background-color: #b3cce6;
+  height: 400px;
+  width: 325px;
+  box-shadow: 2px 2px 2px #111111;
 }

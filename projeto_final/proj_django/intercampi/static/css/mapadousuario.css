@@ -6,7 +6,7 @@ body {
 }
 header{
   background-color: #b3cce6;
-  height: 20px;
+  height: 40px;
   font-size: 18px;
   text-align: center;
   font-variant: Arial, Helvetica;
@@ -23,7 +23,31 @@ footer{
 }
 #mapa{
   position: relative;
-  height: 700px;
+  height: 690px;
   width: 100%;
   background-color: white;
+}
+
+#logo{
+  float:left;
+}
+
+#menu{
+  margin-top: 10px;
+  float:right;
+}
+
+#menu a{
+  padding: 52px 20px;
+  color: black ;
+  text-shadow: 1px 1px #111111;
+}
+
+#menu a:hover{
+  background-color: #8CB1D9;
+}
+
+.container{
+  width: 1050px;
+  margin: 0 auto;
 }

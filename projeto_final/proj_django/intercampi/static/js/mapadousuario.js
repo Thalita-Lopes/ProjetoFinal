@@ -365,6 +365,12 @@ setInterval(function(){
   layerPosicao.getSource().updateParams({"time": Date.now()})
   layerRotaAtual.getSource().updateParams({"time": Date.now()})
   layerPosicaoAtual.getSource().updateParams({"time": Date.now()})
+  layerPosicaoAtualII.getSource().updateParams({"time": Date.now()})
+  layerPosicaoAtualIII.getSource().updateParams({"time": Date.now()})
+  layerPosicaoAtualIV.getSource().updateParams({"time": Date.now()})
+  layerPosicaoAtualExtra.getSource().updateParams({"time": Date.now()})
+  layerPosicaoAtualFerias.getSource().updateParams({"time": Date.now()})
+  layerPosicaoAtual_Linha.getSource().updateParams({"time": Date.now()})
   console.log('update')
 
 },2000);

@@ -7,10 +7,10 @@ var mapa = new ol.Map({
   })
 })
 
-var layerOsm = new ol.layer.Tile({
-  name: 'osm',
+var layerCartoDB = new ol.layer.Tile({
+  name: 'CartoDB Light',
   visible:'true',
-  source:new ol.source.OSM()
+  source:new ol.source.OSM({"url" : "http://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" })
 });
 
 var layerPosicao = new ol.layer.Image({
@@ -37,7 +37,7 @@ var layerRotaAtual = new ol.layer.Image({
   })
 })
 
-mapa.addLayer(layerOsm);
+mapa.addLayer(layerCartoDB);
 mapa.addLayer(layerPosicao);
 mapa.addLayer(layerRotaAtual);
 
