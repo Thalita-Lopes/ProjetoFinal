@@ -1,4 +1,4 @@
-<!DOCTYPE html> {% load static %}
+<!DOCTYPE html> {% load static %} {% load bootstrap %}
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
@@ -21,6 +21,7 @@
     <form action ="salvar_form" method="post">
       {% csrf_token %}
       {{ form }}
+      {{ form|bootstrap}}
       <button type="submit" name="button">Iniciar Viagem</button>
     </form>
     <img src="{% static 'image/logocinza.png' %}" height="500px">
