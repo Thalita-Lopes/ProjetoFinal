@@ -21,7 +21,7 @@
     <form action ="salvar_form" method="post">
       {% csrf_token %}
       {{ form|bootstrap }}
-      <button type="submit" href = 'https://200.17.225.161/salvar_form' name="button">Iniciar Viagem</button>
+      <button type="submit" href = 'salvar_form' name="button">Iniciar Viagem</button>
     </form>
     <img src="{% static 'image/logocinza.png' %}" height="500px">
     <!---<button onclick ="PaginaInicial();"> Sair </button>-->
