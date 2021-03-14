@@ -82,7 +82,7 @@ mapa.on('click', intervalo);
 function Pararfuncao(){
   clearInterval(intervalo);
   alert('Compartilhamento encerrado!')
-  location.href = 'http://localhost:8000/index'
+  location.href = 'http://200.17.225.161/index'
   var json = {"id_vg":id_viagem, "nome_linha":nome_linha}
   $.ajax(
     {
