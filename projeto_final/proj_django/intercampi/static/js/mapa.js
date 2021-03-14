@@ -15,7 +15,7 @@ var layerCartoDB = new ol.layer.Tile({
 
 var layerPosicao = new ol.layer.Image({
   source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi:posicao',
       'SRS':'EPSG:900913',
@@ -27,7 +27,7 @@ var layerPosicao = new ol.layer.Image({
 
 var layerRotaAtual = new ol.layer.Image({
   source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:rota_atual',
       'SRS':'EPSG:900913',
@@ -82,7 +82,7 @@ mapa.on('click', intervalo);
 function Pararfuncao(){
   clearInterval(intervalo);
   alert('Compartilhamento encerrado!')
-  location.href = 'http://localhost:8000/index'
+  location.href = 'http://200.17.225.161/index'
   var json = {"id_vg":id_viagem, "nome_linha":nome_linha}
   $.ajax(
     {
