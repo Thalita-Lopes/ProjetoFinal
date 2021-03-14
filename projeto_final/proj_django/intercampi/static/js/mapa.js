@@ -37,9 +37,92 @@ var layerRotaAtual = new ol.layer.Image({
   })
 })
 
+//Camadas de POSICAO Atual
+var layerPosicaoAtualII = new ol.layer.Image({
+    title: "Intercampi Férias",
+    displayInLayerSwitcher: false,
+    source: new ol.source.ImageWMS({
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    params: {
+      'LAYERS':'intercampi_app:Posicao_atualII',
+    },
+    ratio:1,
+    serverType: 'geoserver'
+  })
+})
+
+var layerPosicaoAtualIII = new ol.layer.Image({
+    title: "Intercampi Férias",
+    displayInLayerSwitcher: false,
+    source: new ol.source.ImageWMS({
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    params: {
+      'LAYERS':'intercampi_app:Posicao_atualIII',
+    },
+    ratio:1,
+    serverType: 'geoserver'
+  })
+})
+
+var layerPosicaoAtualIV = new ol.layer.Image({
+    title: "Intercampi Férias",
+    displayInLayerSwitcher: false,
+    source: new ol.source.ImageWMS({
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    params: {
+      'LAYERS':'intercampi_app:Posicao_atualIV',
+    },
+    ratio:1,
+    serverType: 'geoserver'
+  })
+})
+var layerPosicaoAtualExtra = new ol.layer.Image({
+    title: "Intercampi Férias",
+    displayInLayerSwitcher: false,
+    source: new ol.source.ImageWMS({
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    params: {
+      'LAYERS':'intercampi_app:Posicao_atualExtra',
+    },
+    ratio:1,
+    serverType: 'geoserver'
+  })
+})
+
+var layerPosicaoAtualFerias = new ol.layer.Image({
+    title: "Intercampi Férias",
+    displayInLayerSwitcher: false,
+    source: new ol.source.ImageWMS({
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    params: {
+      'LAYERS':'intercampi_app:Posicao_atualFerias',
+    },
+    ratio:1,
+    serverType: 'geoserver'
+  })
+})
+var layerPosicaoAtual_Linha = new ol.layer.Image({
+    title: "Posicao Atual Intercampi",
+    displayInLayerSwitcher: false,
+    source: new ol.source.ImageWMS({
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    params: {
+      'LAYERS':'intercampi_app:Posicao_atual_Linha',
+    },
+    ratio:1,
+    serverType: 'geoserver'
+  })
+})
 mapa.addLayer(layerCartoDB);
 mapa.addLayer(layerPosicao);
 mapa.addLayer(layerRotaAtual);
+mapa.addLayer(layerPosicaoAtual);
+mapa.addLayer(layerPosicaoAtualII);
+mapa.addLayer(layerPosicaoAtualIII);
+mapa.addLayer(layerPosicaoAtualIV);
+mapa.addLayer(layerPosicaoAtualExtra);
+mapa.addLayer(layerPosicaoAtualFerias);
+mapa.addLayer(layerPosicaoAtual_Linha)
 
 function inserePonto(posicao){
   var json = {"id_vg":id_viagem, "ponto":[posicao[0],posicao[1]], "nome_linha":nome_linha}

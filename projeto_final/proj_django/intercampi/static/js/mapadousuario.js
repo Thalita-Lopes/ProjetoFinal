@@ -23,7 +23,7 @@ var layerPosicao = new ol.layer.Image({
     title: "Posicao",
     displayInLayerSwitcher: true,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:posicao',
     },
@@ -35,7 +35,7 @@ var layerPosicaoAtual = new ol.layer.Image({
     title: "Posicao Atual",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Posicao_atual',
       'SRS':'EPSG:900913',
@@ -48,7 +48,7 @@ var layerPontosDeOnibus = new ol.layer.Image({
   title: "Ponto de onibus",
   displayInLayerSwitcher: true,
   source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:pontosdeonibustcc',
       'SRS':'EPSG:900913',
@@ -62,7 +62,7 @@ var layerRotaAtual = new ol.layer.Image({
   title: "Rota Atual",
   displayInLayerSwitcher: true,
   source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:rota_atual',
       'SRS':'EPSG:900913',
@@ -76,7 +76,7 @@ var layerIntercampi1 = new ol.layer.Image({
     title: "Intercampi I",
     displayInLayerSwitcher: true,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:INTERCAMPI_I',
     },
@@ -88,7 +88,7 @@ var layerIntercampi2 = new ol.layer.Image({
     title: "Intercampi II",
     displayInLayerSwitcher: true,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:INTERCAMPI_II',
     },
@@ -100,7 +100,7 @@ var layerIntercampi3 = new ol.layer.Image({
     title: "Intercampi III",
     displayInLayerSwitcher: true,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:INTERCAMPI_III',
     },
@@ -112,7 +112,7 @@ var layerIntercampi4 = new ol.layer.Image({
     title: "Intercampi IV",
     displayInLayerSwitcher: true,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:INTERCAMPI_IV',
     },
@@ -124,7 +124,7 @@ var layerIntercampiextra = new ol.layer.Image({
     title: "Intercampi Extra",
     displayInLayerSwitcher: true,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:INTERCAMPI_EXTRA',
     },
@@ -136,7 +136,7 @@ var layerIntercampiferias = new ol.layer.Image({
     title: "Intercampi Férias",
     displayInLayerSwitcher: true,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:INTERCAMPI_FERIAS',
     },
@@ -149,7 +149,7 @@ var layerPosicaoAtualII = new ol.layer.Image({
     title: "Intercampi Férias",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Posicao_atualII',
     },
@@ -162,7 +162,7 @@ var layerPosicaoAtualIII = new ol.layer.Image({
     title: "Intercampi Férias",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Posicao_atualIII',
     },
@@ -175,7 +175,7 @@ var layerPosicaoAtualIV = new ol.layer.Image({
     title: "Intercampi Férias",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Posicao_atualIV',
     },
@@ -187,7 +187,7 @@ var layerPosicaoAtualExtra = new ol.layer.Image({
     title: "Intercampi Férias",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Posicao_atualExtra',
     },
@@ -200,7 +200,7 @@ var layerPosicaoAtualFerias = new ol.layer.Image({
     title: "Intercampi Férias",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Posicao_atualFerias',
     },
@@ -212,7 +212,7 @@ var layerPosicaoAtual_Linha = new ol.layer.Image({
     title: "Posicao Atual Intercampi",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Posicao_atual_Linha',
     },
@@ -225,7 +225,7 @@ var layerAgrarias = new ol.layer.Image({
     title: "Campus Agrárias",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Agrarias4326',
     },
@@ -238,7 +238,7 @@ var layerJuveve = new ol.layer.Image({
     title: "Campus Juveve",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Juveve4326',
     },
@@ -251,7 +251,7 @@ var layerPolitecnico = new ol.layer.Image({
     title: "Campus Politecnico",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Politecnico4326',
     },
@@ -264,7 +264,7 @@ var layerReboucas = new ol.layer.Image({
     title: "Campus Reboucas",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Reboucas4326',
     },
@@ -277,7 +277,7 @@ var layerPredioHistorico = new ol.layer.Image({
     title: "Campus PredioHistorico",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:PredioHistorico4326',
     },
@@ -290,7 +290,7 @@ var layerReitoria = new ol.layer.Image({
     title: "Campus Reitoria",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Reitoria4326',
     },
@@ -303,7 +303,7 @@ var layerBotanico = new ol.layer.Image({
     title: "Campus Botanico",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:Botanico4326',
     },
@@ -316,7 +316,7 @@ var layerDeArtes = new ol.layer.Image({
     title: "Campus DeArtes",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
-    url: 'http://200.17.225.171:8081/geoserver/intercampi_app/wms',
+    url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
       'LAYERS':'intercampi_app:DeArtes4326',
     },
