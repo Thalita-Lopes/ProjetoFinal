@@ -31,7 +31,7 @@ def salvar_form(request):
             return render(request, 'mapa.html', {'id_vg':id_vg, 'nome_linha':nome_linha})
         else:
             print 'Não válido'
-            return render(request, 'mapa.html')
+            return render(request, 'mapa')
 
 def ExcluirAnteriores(obj_linha):
     ObjPos = Posicao.objects.filter(nome_linha = obj_linha)
