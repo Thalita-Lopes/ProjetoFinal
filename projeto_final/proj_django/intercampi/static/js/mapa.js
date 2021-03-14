@@ -114,7 +114,7 @@ var layerPosicaoAtual_Linha = new ol.layer.Image({
   })
 })
 mapa.addLayer(layerCartoDB);
-mapa.addLayer(layerPosicao);
+//mapa.addLayer(layerPosicao);
 mapa.addLayer(layerRotaAtual);
 mapa.addLayer(layerPosicaoAtual);
 mapa.addLayer(layerPosicaoAtualII);
@@ -138,6 +138,12 @@ function inserePonto(posicao){
       sucess: function(result){
         layerPosicao.getSource().updateParams({"time": Date.now()})
         layerRotaAtual.getSource().updateParams({"time": Date.now()})
+        layerPosicaoAtualII.getSource().updateParams({"time": Date.now()})
+        layerPosicaoAtualIII.getSource().updateParams({"time": Date.now()})
+        layerPosicaoAtualIV.getSource().updateParams({"time": Date.now()})
+        layerPosicaoAtualExtra.getSource().updateParams({"time": Date.now()})
+        layerPosicaoAtualFerias.getSource().updateParams({"time": Date.now()})
+        layerPosicaoAtual_Linha.getSource().updateParams({"time": Date.now()})
       },
       error: function(error){
         alert(error)
