@@ -171,7 +171,7 @@ mapa.on('click', intervalo);
 function Pararfuncao(){
   clearInterval(intervalo);
   alert('Compartilhamento encerrado!')
-  location.href = 'index'
+  location.href = 'home'
   var json = {"id_vg":id_viagem, "nome_linha":nome_linha}
   $.ajax(
     {
