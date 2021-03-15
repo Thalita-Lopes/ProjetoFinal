@@ -88,7 +88,7 @@ def insereposicao(request):
             """a = Posicao.objects.filter(nome_linha = obj_linha).order_by('-id_posicao')
             Posicao_atual_Linha.Entry.objects.all()[:3]
             print a"""
-            ordenados = Posicao.objects.filter(nome_linha = obj_linha).order_by('id_posicao').all()[:3]
+            ordenados = Posicao.objects.filter(nome_linha = obj_linha).order_by('-id_posicao').all()[:3]
             print ordenados
             ordem = []
             for o in ordenados:

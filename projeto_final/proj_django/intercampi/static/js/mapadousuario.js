@@ -21,7 +21,7 @@ var layerOsm = new ol.layer.Tile({
 
 var layerPosicao = new ol.layer.Image({
     title: "Posicao",
-    displayInLayerSwitcher: true,
+    displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
     url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
@@ -60,7 +60,7 @@ var layerPontosDeOnibus = new ol.layer.Image({
 
 var layerRotaAtual = new ol.layer.Image({
   title: "Rota Atual",
-  displayInLayerSwitcher: true,
+  displayInLayerSwitcher: false,
   source: new ol.source.ImageWMS({
     url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
     params: {
@@ -352,7 +352,7 @@ mapa.addLayer(layerIntercampi2);
 mapa.addLayer(layerIntercampi1);
 mapa.addLayer(layerPontosDeOnibus);
 mapa.addLayer(layerRotaAtual);
-mapa.addLayer(layerPosicao);
+//mapa.addLayer(layerPosicao);
 mapa.addLayer(layerPosicaoAtual);
 mapa.addLayer(layerPosicaoAtualII);
 mapa.addLayer(layerPosicaoAtualIII);
