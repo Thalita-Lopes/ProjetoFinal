@@ -75,7 +75,7 @@ def insereposicao(request):
                 Posicao_atualII.objects.filter(id_pa = 'atual').update(id_viagem = obj_viagem, nome_linha = obj_linha, geom = ponto)
             elif nome_linha ==  'INTERCAMPI III':
                 Posicao_atualIII.objects.filter(id_pa = 'atual').update(id_viagem = obj_viagem, nome_linha = obj_linha, geom = ponto)
-            elif nome_linha == 'INTECAMPI IV':
+            elif nome_linha == 'INTERCAMPI IV':
                 Posicao_atualIV.objects.filter(id_pa = 'atual').update(id_viagem = obj_viagem, nome_linha = obj_linha, geom = ponto)
             elif nome_linha == 'INTERCAMPI EXTRA':
                 Posicao_atualExtra.objects.filter(id_pa = 'atual').update(id_viagem = obj_viagem, nome_linha = obj_linha, geom = ponto)
