@@ -4,7 +4,7 @@ from django.shortcuts import render
 from . forms import Form_Viagens
 from django.http import JsonResponse
 import json
-from . models import Posicao, Viagens, Linhas, Motoristas_cadastrados, Rota_atual, Posicao_atual, Posicao_atualII, Posicao_atualIV, Posicao_atualIII, Posicao_atualExtra, Posicao_atualFerias, Posicao_atual_Linha #Rota_atual, Rota_padrao, Onibus, Paradas, Campi
+from . models import Posicao, Viagens, Linhas, Motoristas_cadastrados, Rota_atual, Posicao_atual, Posicao_atualII, Posicao_atualIV, Posicao_atualIII, Posicao_atualExtra, Posicao_atualFerias, Posicao_atual_Linha 
 from django.contrib.gis.geos import Point, LineString, Polygon
 from django.contrib.gis.geos import GEOSGeometry
 
