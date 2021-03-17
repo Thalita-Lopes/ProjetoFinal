@@ -19,7 +19,7 @@ var layerOsm = new ol.layer.Tile({
 });
 
 
-var layerPosicao = new ol.layer.Image({
+/*var layerPosicao = new ol.layer.Image({
     title: "Posicao",
     displayInLayerSwitcher: false,
     source: new ol.source.ImageWMS({
@@ -30,7 +30,8 @@ var layerPosicao = new ol.layer.Image({
     ratio:1,
     serverType: 'geoserver'
   })
-})
+}) */
+
 var layerPosicaoAtual = new ol.layer.Image({
     title: "Posicao Atual",
     displayInLayerSwitcher: false,
