@@ -45,7 +45,7 @@ var layerPosicaoAtual = new ol.layer.Image({
   })
 })
 var layerPontosDeOnibus = new ol.layer.Image({
-  title: "Ponto de onibus",
+  title: "Pontos de ônibus",
   displayInLayerSwitcher: true,
   source: new ol.source.ImageWMS({
     url: 'https://200.17.225.171:8081/geoserver/intercampi_app/wms',
@@ -352,7 +352,7 @@ mapa.addLayer(layerIntercampi2);
 mapa.addLayer(layerIntercampi1);
 mapa.addLayer(layerPontosDeOnibus);
 mapa.addLayer(layerRotaAtual);
-//mapa.addLayer(layerPosicao);
+
 mapa.addLayer(layerPosicaoAtual);
 mapa.addLayer(layerPosicaoAtualII);
 mapa.addLayer(layerPosicaoAtualIII);
@@ -371,6 +371,7 @@ setInterval(function(){
   layerPosicaoAtualExtra.getSource().updateParams({"time": Date.now()})
   layerPosicaoAtualFerias.getSource().updateParams({"time": Date.now()})
   layerPosicaoAtual_Linha.getSource().updateParams({"time": Date.now()})
+  vector.getSource().updateParams({"time": Date.now()})
   console.log('update')
 
 },2000);
