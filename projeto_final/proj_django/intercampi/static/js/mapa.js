@@ -164,7 +164,7 @@ var intervalo = setInterval(function(){
       console.log(position);
 
       inserePonto(position);
-},4000);
+},3000);
 
 mapa.on('click', intervalo);
 

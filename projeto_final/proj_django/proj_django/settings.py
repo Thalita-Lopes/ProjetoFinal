@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'intercampi',
-    'bootstrapform',
+
 ]
 
 MIDDLEWARE = [
@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'banco_intercampi',
         'USER': 'usuarioexterno',
-        'PASSWORD': 'usuarioOGLusuarioexterno',
+        'PASSWORD': '',
         'HOST': '200.17.225.171',
         'PORT': '5432',
     }
